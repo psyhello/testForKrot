@@ -8,7 +8,8 @@ $file = $upload . basename($_FILES['file']['name']);
 $string = $_POST['string'];
 
 if (move_uploaded_file($_FILES['file']['tmp_name'], $file)) {
-	echo "File uploaded on server. Path to file: ".$file;
+	echo "File uploaded on server. Path to file: ".$file."</br>";
+	search($file,$string);
 }else{
 	echo "Sory, can't upload file";}
 
